@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrdenReporteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Operacione">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idModulo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RolOperacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idRol" Type="Int32" />
+    <Property Name="idOperacion" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="idRol" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="OrdenReporteEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Moduloes" EntityType="Self.Modulo" />
+    <EntitySet Name="Operaciones" EntityType="Self.Operacione" />
+    <EntitySet Name="Rols" EntityType="Self.Rol" />
+    <EntitySet Name="RolOperacions" EntityType="Self.RolOperacion" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <FunctionImport Name="SP_Delete_Usuario">
+      <Parameter Name="id_value" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Insert_Usuario">
+      <Parameter Name="nombre_val" Mode="In" Type="String" />
+      <Parameter Name="email_val" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Select_Usuarios" ReturnType="Collection(OrdenReporteModel.SP_Select_Usuarios_Result)" />
+    <FunctionImport Name="SP_Select_Usuarios_Detalle" ReturnType="Collection(OrdenReporteModel.SP_Select_Usuarios_Detalle_Result)">
+      <Parameter Name="id_value" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Update_Usuario" ReturnType="Collection(OrdenReporteModel.SP_Update_Usuario_Result)">
+      <Parameter Name="id_value" Mode="In" Type="Int32" />
+      <Parameter Name="nombre_value" Mode="In" Type="String" />
+      <Parameter Name="email_value" Mode="In" Type="String" />
+      <Parameter Name="password_value" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_Select_Usuarios_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="true" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="password" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idRol" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_Select_Usuarios_Detalle_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="true" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="password" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idRol" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_Update_Usuario_Result">
+    <Property Type="Int32" Name="id" Nullable="true" />
+    <Property Type="String" Name="nombre" Nullable="true" />
+    <Property Type="String" Name="password" Nullable="true" MaxLength="200" />
+  </ComplexType>
+</Schema>

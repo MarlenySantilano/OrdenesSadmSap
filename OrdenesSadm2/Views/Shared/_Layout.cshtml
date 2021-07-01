@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ordenes de Reporte</title>
+    <!-- Bootstrap CSS CDN -->
+
+    <link rel="icon" type="image/png" href="~/Content/IMG/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="~/Content/CSS/datatables.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/CSS/stylelogin.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/CSS/fontawesome.css" />
+    <link href="@Url.Content("~/Content/CSS/stylelogin.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/CSS/Edificios.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/CSS/sweetalert2.min.css")" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>@Html.ActionLink("Reportes", "Index", "Home")</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="nav-item">
+                    @Html.ActionLink("Alta de Reporte", "Index", "Home")
+                </li>
+                <li class="nav-item">
+                    @{if ((int)Session["Perfil"] == 1)
+                        {
+                            @Html.ActionLink("Usuarios", "Index", "Usuarios")
+                        }
+                    }
+                </li>                
+                <li class="nav-item">
+                    @Html.ActionLink("Cerrar Sesion", "Logout", "Acceso")
+                </li>
+                </ul>
+        </nav>
+        <!-- Page Content  -->
+        <aside id="left-sidebar-nav" style="width: 100%;">
+            <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav justify-content-end">
+                                <li>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container-fluid body-content">
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>Ordenes de Reporte</p>
+                    </footer>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/datatables.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/sweetalert.min.js")"></script>
+    @RenderSection("scripts", required: false)
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script type="text/javascript" src="~/Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/datatables.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$('#collapseOne').collapse({
+            //    toggle: false
+            //})
+            ////Gggggrfgdgds
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

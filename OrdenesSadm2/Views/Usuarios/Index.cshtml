@@ -1,0 +1,84 @@
+﻿@model IEnumerable<OrdenesSadm2.Models.Usuario>
+
+@{
+    Layout = null;
+    WebGrid webGrid = new WebGrid(source: Model, canPage: true, canSort: false);
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<link type="text/css" rel="stylesheet" href="~/Content/CSS/Usuarios.css" />
+<div>
+    <h3>Usuarios</h3>
+</div>
+<div>
+    <br />
+</div>
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="width: 230px">
+            Nombre:<br />
+            <input type="text" id="txtName" style="width:210px" class="form-control" />
+        </td>
+        <td style="width: 230px">
+            Email:<br />
+            <input type="text" id="txtEmail" style="width:210px" class="form-control" />
+        </td>
+        <td style="width: 230px">
+            Password:<br />
+            <input  type="password"  id="txtPassword" style="width:210px" class="form-control" />
+        </td>
+        <td style="width: 100px">
+            <button class="btn color_add " type="button" id="btnAdd" value="Agregar" style="margin-top:10%">
+                <span class="label_des">Agregar</span>
+            </button>
+        </td>
+    </tr>
+</table>
+<div>
+    <br />
+</div>
+<hr />
+@webGrid.GetHtml(
+htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
+tableStyle: "webgrid",
+headerStyle: "webgrid-header",
+footerStyle: "webgrid-footer",
+alternatingRowStyle: "webgrid-alternating-row",
+selectedRowStyle: "webgrid-selected-row",
+rowStyle: "webgrid-row-style",
+columns: webGrid.Columns(
+webGrid.Column(header: "#Id", format:
+@<span class="label">
+    @item.id
+</span>, style: "id"),
+                webGrid.Column(header: "nombre", format: @<span>
+                    <span class="label">@item.nombre</span>
+                    <input class="text" type="text" value="@item.nombre" style="display:none" />
+                </span>, style: "nombre"),
+                                    webGrid.Column(header: "email", format: @<span>
+                                        <span class="label">@item.email</span>
+                                        <input class="text" type="text" value="@item.email" style="display:none" />
+                                    </span>, style: "email"),
+                                webGrid.Column(header: "password", format: @<span>
+    <span id="text_pass" class="label ocultar" type="password" style="font-family: caption;
+  font-size: 16px;">@item.password</span>
+<input class="text" type="password" value="@item.password" style="display:none" />
+<button type="button" class="btn btn-default btn-md hide labelIcon" id="icon">
+    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+</button>
+</span>, style: "password"),
+
+                                                                        webGrid.Column(format:@<span class="float-right">
+                                                                            <a class="Edit  btn color_edit" button type="button" href="javascript:;">Editar</a>
+                                                                            <a class="Update  btn color_cancel" button type="button" href="javascript:;" style="display:none">Guardar</a>
+                                                                            <a class="Cancel  btn color_guardar1 " button type="button" href="javascript:;" style="display:none">Cancelar</a>
+                                                                            <a class="Delete  btn color_borrar" button type="button" href="javascript:;">Borrar</a>
+                                                                        </span>)))
+<br />
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script type="text/javascript" src="~/Scripts/Usuarios.js"></script>

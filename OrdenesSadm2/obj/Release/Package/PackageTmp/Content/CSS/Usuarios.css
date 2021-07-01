@@ -1,0 +1,96 @@
+﻿
+/*body {
+    font-family: Arial;
+    font-size: 10pt;
+}*/
+
+.Grid {
+    border: 0px solid #ccc;
+    border-collapse: collapse;
+}
+
+    .Grid th {
+        background-color: #F7F7F7;
+        font-weight: bold;
+    }
+
+    .Grid th, .Grid td {
+        padding: 5px;
+        width: 150px;
+        border: 1px solid #ccc;
+    }
+
+    .Grid, .Grid table td {
+        border: 0px solid #ccc;
+    }
+
+    .Grid th a, .Grid th a:visited {
+        color: #333;
+     }
+
+.webgrid {
+    width: 80%;
+    border: 0px;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.des {
+    width: 50%;
+}
+
+.webgrid a {
+    color: #000;
+}
+
+.webgrid-header {
+    padding: 6px 5px;
+    text-align: center;
+    background-color: #e8eef4;
+    border-bottom: 2px solid #3966A2;
+    height: 40px;
+    border-top: 2px solid #D6E8FF;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+
+.webgrid-footer {
+    padding: 6px 5px;
+    text-align: center;
+    background-color: #e8eef4;
+    border-top: 2px solid #3966A2;
+    height: 30px;
+    border-bottom: 2px solid #D6E8FF;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+.webgrid-footer td a {
+    color: black !important;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 1;
+    color: #000 !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.ocultar {
+    -webkit-text-security: disc;
+}
+
+.webgrid-alternating-row {
+    height: 45px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #d2d2d2;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+    .webgrid-alternating-row td span span label {
+        font-size: 12px !important;
+    }
