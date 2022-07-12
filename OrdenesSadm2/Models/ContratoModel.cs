@@ -4,6 +4,7 @@ namespace OrdenesSadm2.Controllers
 {
     public class ContratoModel
     {
+        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
         public class Data
         {
             public string Nombre { get; set; }
@@ -15,20 +16,20 @@ namespace OrdenesSadm2.Controllers
             public string Nir { get; set; }
             public string Fecha_Venc { get; set; }
             public string v_totaladeu { get; set; }
-
         }
+
         public class Response
         {
-            public Data data { get; set; }
-
+            public List<Data> data { get; set; }
         }
+
         public class Application
         {
             public bool success { get; set; }
             public bool error { get; set; }
             public string message { get; set; }
             public Response Response { get; set; }
-
         }
+
     }
 }

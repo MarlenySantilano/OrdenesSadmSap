@@ -20,6 +20,23 @@
           <Property Name="nombre" Type="varchar" MaxLength="50" />
           <Property Name="idModulo" Type="int" />
         </EntityType>
+        <EntityType Name="OrdenesReporteLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="folio_orden" Type="varchar" MaxLength="50" />
+          <Property Name="subcatego_orden" Type="varchar" MaxLength="50" />
+          <Property Name="municipio_orden" Type="varchar" MaxLength="150" />
+          <Property Name="colonia_orden" Type="varchar" MaxLength="150" />
+          <Property Name="calle_orden" Type="varchar" MaxLength="150" />
+          <Property Name="puerta_orden" Type="varchar" MaxLength="50" />
+          <Property Name="contrato_orden" Type="varchar" MaxLength="25" />
+          <Property Name="comentarios_orden" Type="varchar" MaxLength="250" />
+          <Property Name="id_usuario_register" Type="varchar" MaxLength="100" />
+          <Property Name="nombre_usuario_register" Type="varchar" MaxLength="100" />
+          <Property Name="fecha_register" Type="datetime" />
+        </EntityType>
         <EntityType Name="Rol">
           <Key>
             <PropertyRef Name="id" />
@@ -49,6 +66,17 @@
         <Function Name="SP_Delete_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_value" Type="int" Mode="In" />
         </Function>
+        <Function Name="SP_Insert_Orden_Log" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="folio_orden" Type="varchar" Mode="In" />
+          <Parameter Name="subcatego_orden" Type="varchar" Mode="In" />
+          <Parameter Name="municipio_orden" Type="varchar" Mode="In" />
+          <Parameter Name="colonia_orden" Type="varchar" Mode="In" />
+          <Parameter Name="calle_orden" Type="varchar" Mode="In" />
+          <Parameter Name="puerta_orden" Type="varchar" Mode="In" />
+          <Parameter Name="contrato_orden" Type="varchar" Mode="In" />
+          <Parameter Name="comentarios_orden" Type="varchar" Mode="In" />
+          <Parameter Name="id_usuario_register" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="SP_Insert_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre_val" Type="varchar(max)" Mode="In" />
           <Parameter Name="email_val" Type="varchar" Mode="In" />
@@ -67,6 +95,7 @@
         <EntityContainer Name="OrdenReporteModelStoreContainer">
           <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrdenesReporteLog" EntityType="Self.OrdenesReporteLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RolOperacion" EntityType="Self.RolOperacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
@@ -141,6 +170,18 @@
             <Parameter Name="email_value" Mode="In" Type="String" />
             <Parameter Name="password_value" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="OrdenesReporteLogs" EntityType="OrdenReporteModel.OrdenesReporteLog" />
+          <FunctionImport Name="SP_Insert_Orden_Log">
+            <Parameter Name="folio_orden" Mode="In" Type="String" />
+            <Parameter Name="subcatego_orden" Mode="In" Type="String" />
+            <Parameter Name="municipio_orden" Mode="In" Type="String" />
+            <Parameter Name="colonia_orden" Mode="In" Type="String" />
+            <Parameter Name="calle_orden" Mode="In" Type="String" />
+            <Parameter Name="puerta_orden" Mode="In" Type="String" />
+            <Parameter Name="contrato_orden" Mode="In" Type="String" />
+            <Parameter Name="comentarios_orden" Mode="In" Type="String" />
+            <Parameter Name="id_usuario_register" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SP_Select_Usuarios_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -163,6 +204,23 @@
           <Property Type="String" Name="nombre" Nullable="true" />
           <Property Type="String" Name="password" Nullable="true" MaxLength="200" />
         </ComplexType>
+        <EntityType Name="OrdenesReporteLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="folio_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="municipio_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="colonia_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="calle_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="puerta_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contrato_orden" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="comentarios_orden" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="id_usuario_register" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_usuario_register" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_register" Type="DateTime" Precision="3" />
+          <Property Name="subcatego_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -250,6 +308,25 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="OrdenesReporteLogs">
+            <EntityTypeMapping TypeName="OrdenReporteModel.OrdenesReporteLog">
+              <MappingFragment StoreEntitySet="OrdenesReporteLog">
+                <ScalarProperty Name="subcatego_orden" ColumnName="subcatego_orden" />
+                <ScalarProperty Name="fecha_register" ColumnName="fecha_register" />
+                <ScalarProperty Name="nombre_usuario_register" ColumnName="nombre_usuario_register" />
+                <ScalarProperty Name="id_usuario_register" ColumnName="id_usuario_register" />
+                <ScalarProperty Name="comentarios_orden" ColumnName="comentarios_orden" />
+                <ScalarProperty Name="contrato_orden" ColumnName="contrato_orden" />
+                <ScalarProperty Name="puerta_orden" ColumnName="puerta_orden" />
+                <ScalarProperty Name="calle_orden" ColumnName="calle_orden" />
+                <ScalarProperty Name="colonia_orden" ColumnName="colonia_orden" />
+                <ScalarProperty Name="municipio_orden" ColumnName="municipio_orden" />
+                <ScalarProperty Name="folio_orden" ColumnName="folio_orden" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_Insert_Orden_Log" FunctionName="OrdenReporteModel.Store.SP_Insert_Orden_Log" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

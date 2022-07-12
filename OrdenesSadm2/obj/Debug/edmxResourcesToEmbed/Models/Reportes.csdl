@@ -65,6 +65,18 @@
       <Parameter Name="email_value" Mode="In" Type="String" />
       <Parameter Name="password_value" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="OrdenesReporteLogs" EntityType="OrdenReporteModel.OrdenesReporteLog" />
+    <FunctionImport Name="SP_Insert_Orden_Log">
+      <Parameter Name="folio_orden" Mode="In" Type="String" />
+      <Parameter Name="subcatego_orden" Mode="In" Type="String" />
+      <Parameter Name="municipio_orden" Mode="In" Type="String" />
+      <Parameter Name="colonia_orden" Mode="In" Type="String" />
+      <Parameter Name="calle_orden" Mode="In" Type="String" />
+      <Parameter Name="puerta_orden" Mode="In" Type="String" />
+      <Parameter Name="contrato_orden" Mode="In" Type="String" />
+      <Parameter Name="comentarios_orden" Mode="In" Type="String" />
+      <Parameter Name="id_usuario_register" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SP_Select_Usuarios_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -87,4 +99,21 @@
     <Property Type="String" Name="nombre" Nullable="true" />
     <Property Type="String" Name="password" Nullable="true" MaxLength="200" />
   </ComplexType>
+  <EntityType Name="OrdenesReporteLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="folio_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="municipio_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="colonia_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="calle_orden" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="puerta_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrato_orden" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="comentarios_orden" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_usuario_register" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_usuario_register" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_register" Type="DateTime" Precision="3" />
+    <Property Name="subcatego_orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

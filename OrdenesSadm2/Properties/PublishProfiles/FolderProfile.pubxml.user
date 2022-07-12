@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\TIBS Marleny\Desktop\Reportes_SADM_Prod</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\TIBS Marleny\Desktop\Reportes_SADM_Dev</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -31,10 +31,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/18/2018 09:44:54</publishTime>
     </File>
     <File Include="bin/OrdenesSadm2.dll">
-      <publishTime>07/01/2021 13:25:55</publishTime>
+      <publishTime>07/08/2021 00:06:36</publishTime>
     </File>
     <File Include="bin/OrdenesSadm2.pdb">
-      <publishTime>07/01/2021 13:25:55</publishTime>
+      <publishTime>07/08/2021 00:06:36</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>05/24/2018 14:38:22</publishTime>
@@ -237,6 +237,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/CSS/Empleados.css">
       <publishTime>06/28/2021 13:57:31</publishTime>
     </File>
+    <File Include="Content/CSS/EstiloSelect2.css">
+      <publishTime>07/06/2021 15:13:42</publishTime>
+    </File>
     <File Include="Content/CSS/fm.tagator.jquery.min.css">
       <publishTime>06/28/2021 13:57:31</publishTime>
     </File>
@@ -279,6 +282,225 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/fontawesome.css">
       <publishTime>06/28/2021 13:44:46</publishTime>
     </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>07/07/2021 12:20:47</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>07/07/2021 12:20:47</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/fontawesome-webfont.eot">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/fontawesome-webfont.svg">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/fontawesome-webfont.ttf">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/fontawesome-webfont.woff">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/fontawesome-webfont.woff2">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/font/FontAwesome.otf">
+      <publishTime>07/07/2021 12:21:09</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/animated.less">
+      <publishTime>07/07/2021 12:21:30</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/core.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/icons.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/larger.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/list.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/path.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/less/variables.less">
+      <publishTime>07/07/2021 12:21:31</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>07/07/2021 12:21:52</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Black.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-BlackItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Bold.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-BoldItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-ExtraBold.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-ExtraBoldItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-ExtraLight.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-ExtraLightItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Italic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Light.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-LightItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Medium.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-MediumItalic.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Regular.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-SemiBold.ttf">
+      <publishTime>07/07/2021 12:22:27</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-SemiBoldItalic.ttf">
+      <publishTime>07/07/2021 12:22:28</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-Thin.ttf">
+      <publishTime>07/07/2021 12:22:28</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/Montserrat-ThinItalic.ttf">
+      <publishTime>07/07/2021 12:22:28</publishTime>
+    </File>
+    <File Include="Content/FONTS/montserrat/OFL.txt">
+      <publishTime>07/07/2021 12:22:28</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Black.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-BlackItalic.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Bold.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-BoldItalic.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-ExtraBold.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-ExtraBoldItalic.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-ExtraLight.ttf">
+      <publishTime>07/07/2021 12:23:04</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-ExtraLightItalic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Italic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Light.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-LightItalic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Medium.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-MediumItalic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Regular.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-SemiBold.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-SemiBoldItalic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-Thin.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
+    <File Include="Content/FONTS/poppins/Poppins-ThinItalic.ttf">
+      <publishTime>07/07/2021 12:23:03</publishTime>
+    </File>
     <File Include="Content/Historial.css">
       <publishTime>06/28/2021 13:44:46</publishTime>
     </File>
@@ -291,8 +513,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/jquery-ui.theme.min.css">
       <publishTime>06/28/2021 13:44:46</publishTime>
     </File>
+    <File Include="Content/LIBS/bootstrap.min.css">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/fontawesome.js">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/jquery-1.10.2.min.js">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/jquery-1.12.4.js">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/jquery-1.css">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/select2.min.css">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/select2.min.js">
+      <publishTime>07/07/2021 13:12:21</publishTime>
+    </File>
+    <File Include="Content/LIBS/solid.js">
+      <publishTime>07/07/2021 09:13:48</publishTime>
+    </File>
+    <File Include="Content/LIBS/sweetalert.min.js">
+      <publishTime>07/07/2021 13:06:26</publishTime>
+    </File>
     <File Include="Content/main.css">
       <publishTime>06/28/2021 13:44:46</publishTime>
+    </File>
+    <File Include="Content/media/manual_rep_operativo.pdf">
+      <publishTime>07/05/2021 10:30:12</publishTime>
+    </File>
+    <File Include="Content/media/manual_rep_operativo_video.mp4">
+      <publishTime>07/05/2021 10:30:12</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>06/30/2021 02:06:39</publishTime>
@@ -305,6 +560,30 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/util.css">
       <publishTime>06/28/2021 13:44:46</publishTime>
+    </File>
+    <File Include="Content/VENDOR/animate.css">
+      <publishTime>07/07/2021 12:23:25</publishTime>
+    </File>
+    <File Include="Content/VENDOR/hamburgers.css">
+      <publishTime>07/07/2021 12:23:25</publishTime>
+    </File>
+    <File Include="Content/VENDOR/hamburgers.min.css">
+      <publishTime>07/07/2021 12:23:25</publishTime>
+    </File>
+    <File Include="Content/VENDOR/select2.css">
+      <publishTime>07/07/2021 12:23:26</publishTime>
+    </File>
+    <File Include="Content/VENDOR/select2.js">
+      <publishTime>07/07/2021 12:23:26</publishTime>
+    </File>
+    <File Include="Content/VENDOR/select2.min.css">
+      <publishTime>07/07/2021 12:23:26</publishTime>
+    </File>
+    <File Include="Content/VENDOR/select2.min.js">
+      <publishTime>07/07/2021 12:23:26</publishTime>
+    </File>
+    <File Include="Content/VENDOR/tilt.jquery.min.js">
+      <publishTime>07/07/2021 12:23:26</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>06/28/2021 12:50:48</publishTime>
@@ -328,16 +607,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/28/2021 12:50:48</publishTime>
     </File>
     <File Include="Models/Reportes.edmx.diagram">
-      <publishTime>06/29/2021 12:54:24</publishTime>
+      <publishTime>07/07/2021 17:44:44</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js">
+      <publishTime>07/07/2021 09:15:37</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js.map">
+      <publishTime>07/07/2021 09:15:37</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js">
+      <publishTime>07/07/2021 09:15:37</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js.map">
+      <publishTime>07/07/2021 09:15:37</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>06/28/2021 12:50:55</publishTime>
+      <publishTime>07/07/2021 09:15:41</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js.map">
+      <publishTime>07/07/2021 09:15:41</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>06/28/2021 12:50:55</publishTime>
+      <publishTime>07/07/2021 09:15:41</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js.map">
+      <publishTime>07/07/2021 09:15:41</publishTime>
     </File>
     <File Include="Scripts/CreateReport.js">
-      <publishTime>07/01/2021 10:10:43</publishTime>
+      <publishTime>07/07/2021 23:28:04</publishTime>
     </File>
     <File Include="Scripts/datatables.js">
       <publishTime>06/29/2021 13:01:05</publishTime>
@@ -363,6 +660,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
       <publishTime>06/28/2021 12:50:55</publishTime>
     </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>07/02/2021 17:51:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>07/07/2021 10:13:47</publishTime>
+    </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>06/28/2021 12:50:58</publishTime>
     </File>
@@ -375,8 +678,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
       <publishTime>06/28/2021 12:50:58</publishTime>
     </File>
+    <File Include="Scripts/json2.js">
+      <publishTime>07/07/2021 10:13:47</publishTime>
+    </File>
     <File Include="Scripts/main.js">
-      <publishTime>06/28/2021 13:27:41</publishTime>
+      <publishTime>07/07/2021 12:02:46</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>06/28/2021 12:50:57</publishTime>
@@ -388,16 +694,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/01/2021 12:17:39</publishTime>
     </File>
     <File Include="Views/Acceso/Login.cshtml">
-      <publishTime>06/30/2021 11:34:34</publishTime>
+      <publishTime>07/07/2021 12:59:12</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/30/2021 18:29:43</publishTime>
+      <publishTime>07/07/2021 16:46:36</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>06/28/2021 12:50:48</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>07/01/2021 12:09:59</publishTime>
+      <publishTime>07/07/2021 13:13:04</publishTime>
     </File>
     <File Include="Views/Usuarios/Index.cshtml">
       <publishTime>07/01/2021 12:12:56</publishTime>

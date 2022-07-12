@@ -82,5 +82,24 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="OrdenesReporteLogs">
+      <EntityTypeMapping TypeName="OrdenReporteModel.OrdenesReporteLog">
+        <MappingFragment StoreEntitySet="OrdenesReporteLog">
+          <ScalarProperty Name="subcatego_orden" ColumnName="subcatego_orden" />
+          <ScalarProperty Name="fecha_register" ColumnName="fecha_register" />
+          <ScalarProperty Name="nombre_usuario_register" ColumnName="nombre_usuario_register" />
+          <ScalarProperty Name="id_usuario_register" ColumnName="id_usuario_register" />
+          <ScalarProperty Name="comentarios_orden" ColumnName="comentarios_orden" />
+          <ScalarProperty Name="contrato_orden" ColumnName="contrato_orden" />
+          <ScalarProperty Name="puerta_orden" ColumnName="puerta_orden" />
+          <ScalarProperty Name="calle_orden" ColumnName="calle_orden" />
+          <ScalarProperty Name="colonia_orden" ColumnName="colonia_orden" />
+          <ScalarProperty Name="municipio_orden" ColumnName="municipio_orden" />
+          <ScalarProperty Name="folio_orden" ColumnName="folio_orden" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_Insert_Orden_Log" FunctionName="OrdenReporteModel.Store.SP_Insert_Orden_Log" />
   </EntityContainerMapping>
 </Mapping>

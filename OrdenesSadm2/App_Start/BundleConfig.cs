@@ -28,6 +28,22 @@ namespace OrdenesSadm2
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/libs").Include(
+            "~/Content/LIBS/fontawesome.js",
+            "~/Content/LIBS/jquery-1.10.2.min.js",
+            "~/Content/LIBS/jquery-1.12.4.js",
+            "~/Content/LIBS/select2.min.js",
+            "~/Content/LIBS/solid.js"));
+
+            bundles.Add(new StyleBundle("~/Content/libsSelect").Include(
+           "~/Content/LIBS/bootstrap.min.css",
+           "~/Content/LIBS/jquery-1.css",
+           "~/Content/LIBS/select2.min.css",
+           "~/Content/CSS/datatables.css",
+           "~/Content/CSS/stylelogin.css",
+           "~/Content/CSS/fontawesome.css"));
+
         }
     }
 }

@@ -8,21 +8,10 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="~/Content/img/favicon.ico" />
-
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Content/vendor/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Content/vendor/select2.min.css">
-    <!--===============================================================================================-->
+    
     <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
 
-    @Scripts.Render("~/bundles/modernizr")
     <!--===============================================================================================-->
 </head>
 <body>
@@ -41,7 +30,7 @@
                     <h4 style="font-family:Arial; color:#515151;">Usuario</h4>
                     <br />
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100 form-control" type="email" name="User" id="inputEmail" placeholder="Email" required autofocus>
+                        <input class="input100 form-control" @*type="email"*@ name="User" id="inputEmail" placeholder="Email" required autofocus>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -65,37 +54,38 @@
                     </div>
 
                     @*<div class="text-center p-t-12">
-                        <span class="txt1">
-                            Olvide mi
-                        </span>
-                        <a class="txt2" href="#">
-                            Usuario / Contraseña?
-                        </a>
-                    </div>
+                            <span class="txt1">
+                                Olvide mi
+                            </span>
+                            <a class="txt2" href="#">
+                                Usuario / Contraseña?
+                            </a>
+                        </div>
                     *@
                 </form>
             </div>
         </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
 
+    @*href="~/Content/CSS/main.css"
+        <!--===============================================================================================-->
+        <!-- <script src="~/Content/vendor/select2.js"></script>
 
-    @*href="~/Content/CSS/main.css"*@
-    <!--===============================================================================================-->
-    <script src="~/Content/vendor/select2.js"></script>
-
-    <!--===============================================================================================-->
-    <script src="~/Content/vendor/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Content/vendor/tilt.jquery.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Content/vendor/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Content/vendor/tilt.jquery.min.js"></script>-->*@
 
     <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
+              /*  $('.js-tilt').tilt({
+                    scale: 1.1
+                })
+                */
+
     </script>
+
+
     <!--===============================================================================================-->
     <script src="~/Scripts/main.js"></script>
 

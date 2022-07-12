@@ -15,6 +15,23 @@
     <Property Name="nombre" Type="varchar" MaxLength="50" />
     <Property Name="idModulo" Type="int" />
   </EntityType>
+  <EntityType Name="OrdenesReporteLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="folio_orden" Type="varchar" MaxLength="50" />
+    <Property Name="subcatego_orden" Type="varchar" MaxLength="50" />
+    <Property Name="municipio_orden" Type="varchar" MaxLength="150" />
+    <Property Name="colonia_orden" Type="varchar" MaxLength="150" />
+    <Property Name="calle_orden" Type="varchar" MaxLength="150" />
+    <Property Name="puerta_orden" Type="varchar" MaxLength="50" />
+    <Property Name="contrato_orden" Type="varchar" MaxLength="25" />
+    <Property Name="comentarios_orden" Type="varchar" MaxLength="250" />
+    <Property Name="id_usuario_register" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_usuario_register" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_register" Type="datetime" />
+  </EntityType>
   <EntityType Name="Rol">
     <Key>
       <PropertyRef Name="id" />
@@ -44,6 +61,17 @@
   <Function Name="SP_Delete_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id_value" Type="int" Mode="In" />
   </Function>
+  <Function Name="SP_Insert_Orden_Log" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="folio_orden" Type="varchar" Mode="In" />
+    <Parameter Name="subcatego_orden" Type="varchar" Mode="In" />
+    <Parameter Name="municipio_orden" Type="varchar" Mode="In" />
+    <Parameter Name="colonia_orden" Type="varchar" Mode="In" />
+    <Parameter Name="calle_orden" Type="varchar" Mode="In" />
+    <Parameter Name="puerta_orden" Type="varchar" Mode="In" />
+    <Parameter Name="contrato_orden" Type="varchar" Mode="In" />
+    <Parameter Name="comentarios_orden" Type="varchar" Mode="In" />
+    <Parameter Name="id_usuario_register" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="SP_Insert_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="nombre_val" Type="varchar(max)" Mode="In" />
     <Parameter Name="email_val" Type="varchar" Mode="In" />
@@ -62,6 +90,7 @@
   <EntityContainer Name="OrdenReporteModelStoreContainer">
     <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdenesReporteLog" EntityType="Self.OrdenesReporteLog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RolOperacion" EntityType="Self.RolOperacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />

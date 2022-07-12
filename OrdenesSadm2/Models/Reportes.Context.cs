@@ -32,6 +32,7 @@ namespace OrdenesSadm2.Models
         public virtual DbSet<Rol> Rols { get; set; }
         public virtual DbSet<RolOperacion> RolOperacions { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<OrdenesReporteLog> OrdenesReporteLogs { get; set; }
     
         public virtual int SP_Delete_Usuario(Nullable<int> id_value)
         {
@@ -92,6 +93,47 @@ namespace OrdenesSadm2.Models
                 new ObjectParameter("password_value", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_Update_Usuario_Result>("SP_Update_Usuario", id_valueParameter, nombre_valueParameter, email_valueParameter, password_valueParameter);
+        }
+    
+        public virtual int SP_Insert_Orden_Log(string folio_orden, string subcatego_orden, string municipio_orden, string colonia_orden, string calle_orden, string puerta_orden, string contrato_orden, string comentarios_orden, string id_usuario_register)
+        {
+            var folio_ordenParameter = folio_orden != null ?
+                new ObjectParameter("folio_orden", folio_orden) :
+                new ObjectParameter("folio_orden", typeof(string));
+    
+            var subcatego_ordenParameter = subcatego_orden != null ?
+                new ObjectParameter("subcatego_orden", subcatego_orden) :
+                new ObjectParameter("subcatego_orden", typeof(string));
+    
+            var municipio_ordenParameter = municipio_orden != null ?
+                new ObjectParameter("municipio_orden", municipio_orden) :
+                new ObjectParameter("municipio_orden", typeof(string));
+    
+            var colonia_ordenParameter = colonia_orden != null ?
+                new ObjectParameter("colonia_orden", colonia_orden) :
+                new ObjectParameter("colonia_orden", typeof(string));
+    
+            var calle_ordenParameter = calle_orden != null ?
+                new ObjectParameter("calle_orden", calle_orden) :
+                new ObjectParameter("calle_orden", typeof(string));
+    
+            var puerta_ordenParameter = puerta_orden != null ?
+                new ObjectParameter("puerta_orden", puerta_orden) :
+                new ObjectParameter("puerta_orden", typeof(string));
+    
+            var contrato_ordenParameter = contrato_orden != null ?
+                new ObjectParameter("contrato_orden", contrato_orden) :
+                new ObjectParameter("contrato_orden", typeof(string));
+    
+            var comentarios_ordenParameter = comentarios_orden != null ?
+                new ObjectParameter("comentarios_orden", comentarios_orden) :
+                new ObjectParameter("comentarios_orden", typeof(string));
+    
+            var id_usuario_registerParameter = id_usuario_register != null ?
+                new ObjectParameter("id_usuario_register", id_usuario_register) :
+                new ObjectParameter("id_usuario_register", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_Insert_Orden_Log", folio_ordenParameter, subcatego_ordenParameter, municipio_ordenParameter, colonia_ordenParameter, calle_ordenParameter, puerta_ordenParameter, contrato_ordenParameter, comentarios_ordenParameter, id_usuario_registerParameter);
         }
     }
 }

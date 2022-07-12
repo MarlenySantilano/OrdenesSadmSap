@@ -9,6 +9,9 @@
 }
 
 <link type="text/css" rel="stylesheet" href="~/Content/CSS/Empleados.css" />
+<link type="text/css" rel="stylesheet" href="~/Content/CSS/EstiloSelect2.css" />
+<script type="text/javascript" src="~/Scripts/json2.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
 <div class="col-lg-12">
     <div class="row">
         <div class="col-lg-10">
@@ -25,7 +28,7 @@
         <div class="form-group col-lg-6">
             <div class="form-group">
                 <label for="txtReferencia_Medio">Orden Mediante:</label>
-                <select class=" col-lg-12 form-control form-control-lg" id="txtReferencia_Medio">
+                <select class=" col-lg-12 form-control form-control-lg " id="txtReferencia_Medio">
                     <option value="0" readonly>Selecciona una Opcion</option>
                     <option value="1">Dirección</option>
                     <option value="2">Contrato</option>
@@ -35,13 +38,38 @@
         <div class="form-group col-lg-6">
             <div class="row">
                 <label for="txtTipoReporte">Tipo de Orden*</label>
-                <select class=" col-lg-12 form-control form-control-lg" id="txtTipoReporte">
+                <select class=" col-lg-12 form-control form-control-lg select2 personalSize" id="txtTipoReporte" style="width:100%">
                     <option value="0" readonly>Selecciona una Opcion</option>
-                    <option value="RT04">Fuga de Agua en el medidor</option>
-                    <option value="RT05">Fuga de Agua en la banqueta</option>
-                    <option value="RT06">Fuga de Agua en la calle</option>
-                    <option value="RT07">Baja Presion de Agua</option>
-                    <option value="RT08">Desperdicio de Agua</option>
+                    <option value="RT04">Fuga de agua en medidor</option>
+                    <option value="RT05">Fuga de agua en banqueta</option>
+                    <option value="RT06">Fuga de agua en la calle</option>
+                    <option value="RT07">Baja presión de Agua</option>
+                    <option value="RT08">Fuga de Drenaje</option>
+                    <option value="RT09">Mal Uso del Agua</option>
+                    <option value="RT10">Albañilería</option>
+                    <option value="RT11">Calidad del agua</option>
+                    <option value="RT12">Contingencia</option>
+                    <option value="RT13">Dar agua provisional</option>
+                    <option value="RT14">Drenaje con tapa o brocal dañado</option>
+                    <option value="RT15">Drenaje sin tapa</option>
+                    <option value="RT16">Entronque</option>
+                    <option value="RT17">Falta de agua</option>
+                    <option value="RT18">Hidrantes</option>
+                    <option value="RT19">Inspección por presunto fraude/robo</option>
+                    <option value="RT20">Línea general de drenaje tapado</option>
+                    <option value="RT21">Mal uso del agua</option>
+                    <option value="RT22">Medidor general</option>
+                    <option value="RT23">O/S Revisión de drenaje</option>
+                    <option value="RT24">Pavimentar</option>
+                    <option value="RT25">PE Insp de serv por manto de sectorización</option>
+                    <option value="RT26">PE Insp de servicio por sectorización</option>
+                    <option value="RT27">PE Inst. de macromedición por sectorización</option>
+                    <option value="RT28">PE Inst de regulador de presión</option>
+                    <option value="RT29">PE Manto de Regulador de presión</option>
+                    <option value="RT30">PE Rev de med gral de circuito</option>
+                    <option value="RT31">PE Rev macromedición por manto de circuitos</option>
+                    <option value="RT32">PE Revisión de fugas en tanques</option>
+                    <option value="RT33">Pozo y/o bombeo</option>
                 </select>
             </div>
         </div>
@@ -53,7 +81,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <label for="txtReferencia_V">Referencia*</label>
+            <label for="txtReferencia_V">Comentarios*</label>
             <br />
             <input type="text" id="txtReferencia_V" class="form-control col-lg-12" />
         </div>
@@ -61,13 +89,13 @@
     <div>
         <br />
     </div>
-    <div id="Div_Direccion" class="hide">
+    <div id="Div_Direccion" class="d-none">
         <div class="row">
             <div class="col-lg-2"><label>Municipio*</label></div>
             <div class="col-lg-10">
-                <select class="col-lg-12 form-control form-control-lg" id="txtMunicipio"></select>
+                <select class="col-lg-12 form-control form-control-lg select2" id="txtMunicipio" onchange="municipios()" style="width:100%"></select>
             </div>
-            <input type="text" id="Municipio" class="hide" />
+            <input type="text" id="Municipio" class="d-none" />
 
         </div>
         <div>
@@ -76,9 +104,9 @@
         <div class="row">
             <div class="col-lg-2"><label>Colonia*</label></div>
             <div class="col-lg-10">
-                <select class="col-lg-12 form-control form-control-lg" id="txtColonia" readonly></select>
+                <select class="col-lg-12 form-control form-control-lg select2" id="txtColonia" onchange="colonias()" readonly style="width:100%"></select>
             </div>
-            <input type="text" id="Colonia" class="hide" />
+            <input type="text" id="Colonia" class="d-none" />
         </div>
         <div>
             <br />
@@ -86,17 +114,17 @@
         <div class="row">
             <div class="col-lg-2"><label>Calle*</label></div>
             <div class="col-lg-5">
-                <select class="col-lg-12 form-control form-control-lg" id="txtCalle" readonly></select>
+                <select class="col-lg-12 form-control form-control-lg select2" id="txtCalle" onchange="calles()" readonly style="width:100%"></select>
             </div>
-            <input type="text" id="Calle" class="hide" />
+            <input type="text" id="Calle" class="d-none" />
             <div class="col-lg-1 col-lg-offset-1"><label>Número Exterior*</label></div>
             <div class="col-lg-3">
                 <input type="number" class="form-control " id="txtNumE_V" placeholder="Número Exterior">
             </div>
-            <input type="text" id="txtNumI_V" class="hide" />
+            <input type="text" id="txtNumI_V" class="d-none" />
         </div>
     </div>
-    <div id="Div_Contratos" class="hide">
+    <div id="Div_Contratos" class="d-none">
         <form class="form-inline col-lg-12 col-md-12 col-sm-12" style="margin-left: 3%;">
             <div class="form-group ">
                 <label for="txtContrato_Val">Contrato*:</label>
@@ -106,12 +134,12 @@
         </form>
     </div>
 </div>
-    <div>
-        <br />
-    </div>
-    <div>
-        <br />
-    </div>
+<div>
+    <br />
+</div>
+<div>
+    <br />
+</div>
 <div class="col-lg-12 col-md-12 col-sm-12">
     <br />
 </div>
@@ -146,6 +174,8 @@
 <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="row">
+            <div class="form-group col-lg-10">
+            </div>
             <div class="form-group col-lg-2 col-lg-offset-10">
                 <button class="btn color_add " type="button" id="btnAdd" value="Agregar">
                     <span class="label_des">Crear Reporte</span>
@@ -156,6 +186,7 @@
 </div>
 
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>-->
+
 <script type="text/javascript" src="~/Scripts/CreateReport.js"></script>
